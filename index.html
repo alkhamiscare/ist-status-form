@@ -7,9 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="background"></div>
+
   <div class="container">
-    <h1>Inter-Showroom Transfer (IST) Status</h1>
-    <p class="subtitle">Submit the latest status of your IST for tracking and coordination.</p>
+      <!-- Logo -->
+  <div class="logo-container">
+    <img src="https://alkhamis.om/wp-content/uploads/2020/11/AL-KHAMIS-SHOES-LOGO-page-001.png" alt="Al Khamis Shoes Logo">
+  </div>
+    <h1>IST Status Form</h1>
+    <p class="subtitle">Submit your showroom’s IST status</p>
 
     <form id="statusForm">
       <!-- Brand Dropdown -->
@@ -28,7 +34,7 @@
       <input type="date" id="istDate" name="istDate" required />
 
       <!-- Showroom Code -->
-      <label for="showroom">Showroom / LOC Code (3-Digit)</label>
+      <label for="showroom">Showroom / LOC Code</label>
       <input type="text" id="showroom" name="showroom" maxlength="3" placeholder="e.g., 101" required />
 
       <!-- Status Options -->
@@ -51,9 +57,7 @@
   </div>
 
   <script>
-    // Replace this URL with your Google Apps Script deployment URL
     const scriptURL = "https://script.google.com/macros/s/AKfycbyJONSROs4hAMtYcGjEnFQbu2pXhup-m-Xac_xz4gPTJstPAggJlA83_pjpJ8o4JqY/exec";
-
     const form = document.getElementById("statusForm");
     const successMsg = document.getElementById("successMsg");
 
