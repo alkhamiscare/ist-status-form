@@ -1,125 +1,168 @@
-/* General Page Styling */
+/* ======= Page Background ======= */
 body {
-  background: linear-gradient(135deg, #e0f2ff, #f8fbff);
-  font-family: "Inter", Arial, sans-serif;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   min-height: 100vh;
-  margin: 0;
-  padding: 40px 20px;
+  background: #ffe7d6;
+  position: relative;
 }
 
-/* Container */
+.background {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(135deg, #ffd7b5 0%, #ffb07c 100%);
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+/* ======= Form Card ======= */
 .container {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 35px 30px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px 35px;
   width: 100%;
-  max-width: 500px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
-}
-.container:hover {
-  transform: translateY(-3px);
+  max-width: 520px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
 }
 
-/* Heading */
+/* ======= Headings ======= */
 h1 {
   text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 5px;
+  font-weight: 700;
   color: #1e293b;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
 }
 .subtitle {
   text-align: center;
+  font-size: 0.95rem;
   color: #64748b;
   margin-bottom: 25px;
-  font-size: 0.95rem;
 }
 
-/* Form Elements */
+/* ======= Labels ======= */
 label {
   display: block;
+  margin: 15px 0 8px;
   font-weight: 600;
   color: #334155;
-  margin: 15px 0 8px;
 }
 
+/* ======= Inputs, Select, Textarea ======= */
 input[type="text"],
 input[type="date"],
 select,
 textarea {
   width: 100%;
-  padding: 12px 14px;
-  border: 1.5px solid #cbd5e1;
-  border-radius: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
   font-size: 1rem;
-  background-color: #fff;
   outline: none;
-  transition: 0.25s ease;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  background: #fff;
 }
 
 input:focus,
-textarea:focus,
-select:focus {
+select:focus,
+textarea:focus {
   border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.2);
+  background: #fff;
 }
 
-/* Radio Buttons */
+/* ======= Radio Buttons ======= */
 .options label {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 10px 12px;
   margin-bottom: 10px;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.options input[type="radio"] {
+  accent-color: #2563eb;
+  width: 18px;
+  height: 18px;
 }
 
 .options label:hover {
-  background: #e0f2fe;
-  border-color: #3b82f6;
+  background: #eff6ff;
+  border-color: #60a5fa;
 }
 
-/* Button */
+/* ======= Button ======= */
 button {
   width: 100%;
+  padding: 14px 0;
   margin-top: 20px;
-  padding: 12px 16px;
-  background: #2563eb;
-  color: #fff;
   border: none;
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #fb923c 0%, #f97316 100%);
+  color: #fff;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.25s ease;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(251, 146, 60, 0.3);
 }
 
 button:hover {
-  background: #1d4ed8;
+  background: linear-gradient(90deg, #f97316 0%, #ea580c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(251,146,60,0.35);
 }
 
-/* Success Message */
+/* ======= Success Message ======= */
 .success-message {
-  margin-top: 15px;
+  margin-top: 18px;
   background: #dcfce7;
   color: #166534;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 12px;
+  border-radius: 12px;
   text-align: center;
   font-weight: 500;
 }
 
-/* Responsive */
-@media (max-width: 500px) {
+/* ======= Logo ======= */
+.logo-container {
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.logo-container img {
+  max-width: 500px; /* adjust size */
+  height: auto;
+  display: inline-block;
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 550px) {
   .container {
-    padding: 25px 20px;
+    padding: 30px 25px;
   }
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
