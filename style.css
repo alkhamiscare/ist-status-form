@@ -152,7 +152,7 @@ button:hover {
 }
 
 .logo-container img {
-  max-width: 500px; /* adjust size */
+  max-width: 200px; /* adjust size */
   height: auto;
   display: inline-block;
 }
@@ -166,3 +166,4 @@ button:hover {
     font-size: 1.6rem;
   }
 }
+
