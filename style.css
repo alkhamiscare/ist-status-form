@@ -9,14 +9,17 @@ body {
   min-height: 100vh;
   background: #ffe7d6;
   position: relative;
+  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-y: auto;   /* optional: allow vertical scroll only if needed */
 }
 
 .background {
   position: absolute;
   top: -50px;
-  left: -50px;
-  width: 150%;
-  height: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120vw;      /* reduced width */
+  height: 120vh;     /* reduced height */
   background: linear-gradient(135deg, #ffd7b5 0%, #ffb07c 100%);
   z-index: -1;
   border-radius: 50%;
@@ -70,20 +73,33 @@ label {
   color: #334155;
 }
 
-/* ======= Inputs, Select, Textarea ======= */
+/* ======= Normalize all inputs, selects, textarea ======= */
 input[type="text"],
 input[type="date"],
 select,
 textarea {
   width: 100%;
-  padding: 14px 16px;
+  padding: 14px 16px;   /* same padding for all */
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   font-size: 1rem;
   outline: none;
   background: #f9fafb;
+  box-sizing: border-box; /* ensures padding + border doesn't exceed container */
   transition: all 0.25s ease;
 }
+
+/* Remove extra width/margin for date picker in some browsers */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"] {
+  text-align: left; /* aligns date text with other inputs */
+}
+
 
 input:hover,
 select:hover,
@@ -169,3 +185,4 @@ button:hover {
     max-width: 140px;
   }
 }
+
