@@ -47,13 +47,12 @@ body {
 }
 
 .logo-container img {
-  max-width: 250px;      /* bigger logo */
+  max-width: 300px;      /* bigger logo */
   width: 80%;            /* responsive */
   height: auto;
   display: inline-block;
   border-radius: 12px;   /* optional for card style */
-  position: relative;
-  top: -30px;            /* slightly overlap the top of card */
+  position: relative;    
   box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* optional: nice subtle shadow */
 }
 
@@ -191,6 +190,7 @@ button:hover {
     max-width: 140px;
   }
 }
+
 
 
 
