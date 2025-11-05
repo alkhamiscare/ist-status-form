@@ -43,14 +43,20 @@ body {
 .logo-container {
   text-align: center;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .logo-container img {
-  max-width: 220px;  /* fits nicely inside the card */
+  max-width: 250px;      /* bigger logo */
+  width: 80%;            /* responsive */
   height: auto;
   display: inline-block;
-  border-radius: 12px; /* optional */
+  border-radius: 12px;   /* optional for card style */
+  position: relative;
+  top: -30px;            /* slightly overlap the top of card */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* optional: nice subtle shadow */
 }
+
 
 /* ======= Headings ======= */
 h1 {
@@ -185,5 +191,6 @@ button:hover {
     max-width: 140px;
   }
 }
+
 
 
